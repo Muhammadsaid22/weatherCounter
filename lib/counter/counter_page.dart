@@ -11,12 +11,12 @@ class CounterPage extends StatelessWidget {
       ){
     return Container(
       color: darkMode?Colors.black:Colors.white,
+      padding: EdgeInsets.symmetric(horizontal: 16),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children:[
             Text("$locationMessage\n\n\n",style: TextStyle(
-              fontSize: 18,
               color: darkMode? Colors.green.shade900:Colors.blue
             ),),
             Text('You have pushed the button this many times : ',
@@ -27,6 +27,7 @@ class CounterPage extends StatelessWidget {
             style: TextStyle(
                 color: darkMode? Colors.grey:Colors.black
             ),),
+            SizedBox(height: 170,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -39,7 +40,7 @@ class CounterPage extends StatelessWidget {
                   },
                   child: Icon(Icons.cloud),
                 ),
-                SizedBox(width: 130,),
+               Spacer(),
                 if(counter<=10)
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -66,7 +67,7 @@ class CounterPage extends StatelessWidget {
                   },
                   child: Icon(Icons.color_lens),
                 ),
-                SizedBox(width: 130,),
+                Spacer(),
                 if(counter>=1)
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
